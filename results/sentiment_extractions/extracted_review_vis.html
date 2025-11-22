@@ -1,0 +1,218 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Inception (2010) User Review by 10srcooper 
+This film is genuinely <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">a masterpiece in both concept and execution</span>. Christopher Nolan has 
+created <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">a world within a world that is unlike anything I&#x27;ve ever seen before</span>. <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">The layers of 
+dreams and reality are portrayed so seamlessly</span> that <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">you often find yourself questioning what 
+is real and what is not</span>, which is exactly the point of the movie. 
+<span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">Leonardo DiCaprio delivers a solid performance as Cobb</span>, <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">capturing the anguish and 
+determination of a man haunted by his past</span>. <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">The supporting cast is equally impressive</span>, with 
+<span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">Joseph Gordon-Levitt and Ellen Page standing out in their respective roles</span>. <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">The dialogue is 
+sometimes dense and complex</span>, but <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">it suits the intricate plot and adds to the film’s 
+intellectual appeal</span>. 
+<span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">The score by Hans Zimmer is unforgettable</span>, <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">elevating every scene to emotional heights that 
+are both thrilling and haunting</span>. <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">The imagery is stunning</span>; <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">Wally Pfister’s award-winning 
+cinematography creates</span> <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">breathtaking visuals that linger in your mind long after the credits 
+roll</span>. 
+That said, <span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">the film’s ambitious narrative structure and slow pacing might not be for 
+everyone</span>. At times, <span class="lx-highlight" data-idx="16" style="background-color:#C8E6C9;">the exposition feels overwhelming</span>, and <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">the emotional core sometimes 
+takes a backseat to the plot mechanics</span>. <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">The ending remains ambiguous</span>, <span class="lx-highlight" data-idx="19" style="background-color:#D2E3FC;">sparking debates 
+among viewers</span>, which <span class="lx-highlight" data-idx="20" style="background-color:#D2E3FC;">might be frustrating for those who prefer clear-cut conclusions</span>. 
+Overall, Inception is <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">a film that challenges its audience</span> while <span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">delivering an exhilarating 
+cinematic experience</span>. It&#x27;s <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">a thoughtful blend of blockbuster action and art-house creativity</span> 
+that <span class="lx-highlight" data-idx="24" style="background-color:#C8E6C9;">stands the test of time</span>. 
+This review captures a variety of sentiment polarities: praise for acting, direction, score, and 
+visuals; criticism regarding pacing, exposition, and ambiguous storytelling. 
+If you want, I can provide this review in text file or structured format for your extraction 
+purposes. Let me know!
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="24" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/25</span> |
+          Pos <span id="posInfo">[82-125]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "a masterpiece in both concept and execution", "color": "#C8E6C9", "startPos": 82, "endPos": 125, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nInception (2010) User Review by 10srcooper \nThis film is genuinely ", "extractionText": "a masterpiece in both concept and execution", "afterText": ". Christopher Nolan has \ncreated a world within a world that is unlike anything I&#x27;ve ever seen before. The layers of \ndreams and reality are portrayed", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">masterpiece</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "a world within a world that is unlike anything I've ever seen before", "color": "#C8E6C9", "startPos": 158, "endPos": 226, "beforeText": "**\n&quot;&quot;&quot;\nInception (2010) User Review by 10srcooper \nThis film is genuinely a masterpiece in both concept and execution. Christopher Nolan has \ncreated ", "extractionText": "a world within a world that is unlike anything I&#x27;ve ever seen before", "afterText": ". The layers of \ndreams and reality are portrayed so seamlessly that you often find yourself questioning what \nis real and what is not, which is exact", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The world created by Christopher Nolan</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">unlike anything I&#x27;ve ever seen before</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "The layers of dreams and reality are portrayed so seamlessly", "color": "#C8E6C9", "startPos": 228, "endPos": 289, "beforeText": "ely a masterpiece in both concept and execution. Christopher Nolan has \ncreated a world within a world that is unlike anything I&#x27;ve ever seen before. ", "extractionText": "The layers of \ndreams and reality are portrayed so seamlessly", "afterText": " that you often find yourself questioning what \nis real and what is not, which is exactly the point of the movie. \nLeonardo DiCaprio delivers a solid ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The portrayal of dreams and reality</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">portrayed so seamlessly</span>}</div>"}, {"index": 3, "class": "audience_impact", "text": "you often find yourself questioning what is real and what is not", "color": "#D2E3FC", "startPos": 295, "endPos": 360, "beforeText": "has \ncreated a world within a world that is unlike anything I&#x27;ve ever seen before. The layers of \ndreams and reality are portrayed so seamlessly that ", "extractionText": "you often find yourself questioning what \nis real and what is not", "afterText": ", which is exactly the point of the movie. \nLeonardo DiCaprio delivers a solid performance as Cobb, capturing the anguish and \ndetermination of a man ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">confusion, curiosity</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The portrayal of dreams and reality</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "Leonardo DiCaprio delivers a solid performance as Cobb", "color": "#C8E6C9", "startPos": 404, "endPos": 458, "beforeText": "reality are portrayed so seamlessly that you often find yourself questioning what \nis real and what is not, which is exactly the point of the movie. \n", "extractionText": "Leonardo DiCaprio delivers a solid performance as Cobb", "afterText": ", capturing the anguish and \ndetermination of a man haunted by his past. The supporting cast is equally impressive, with \nJoseph Gordon-Levitt and Ell", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Leonardo DiCaprio&#x27;s performance as Cobb</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">solid performance</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "capturing the anguish and determination of a man haunted by his past", "color": "#C8E6C9", "startPos": 460, "endPos": 529, "beforeText": "yourself questioning what \nis real and what is not, which is exactly the point of the movie. \nLeonardo DiCaprio delivers a solid performance as Cobb, ", "extractionText": "capturing the anguish and \ndetermination of a man haunted by his past", "afterText": ". The supporting cast is equally impressive, with \nJoseph Gordon-Levitt and Ellen Page standing out in their respective roles. The dialogue is \nsometi", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Leonardo DiCaprio&#x27;s performance</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">capturing the anguish and determination</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "The supporting cast is equally impressive", "color": "#C8E6C9", "startPos": 531, "endPos": 572, "beforeText": "e point of the movie. \nLeonardo DiCaprio delivers a solid performance as Cobb, capturing the anguish and \ndetermination of a man haunted by his past. ", "extractionText": "The supporting cast is equally impressive", "afterText": ", with \nJoseph Gordon-Levitt and Ellen Page standing out in their respective roles. The dialogue is \nsometimes dense and complex, but it suits the int", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The supporting cast</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">equally impressive</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "Joseph Gordon-Levitt and Ellen Page standing out in their respective roles", "color": "#C8E6C9", "startPos": 580, "endPos": 654, "beforeText": " a solid performance as Cobb, capturing the anguish and \ndetermination of a man haunted by his past. The supporting cast is equally impressive, with \n", "extractionText": "Joseph Gordon-Levitt and Ellen Page standing out in their respective roles", "afterText": ". The dialogue is \nsometimes dense and complex, but it suits the intricate plot and adds to the film\u2019s \nintellectual appeal. \nThe score by Hans Zimmer", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Joseph Gordon-Levitt and Ellen Page</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">standing out</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "The dialogue is sometimes dense and complex", "color": "#C8E6C9", "startPos": 656, "endPos": 700, "beforeText": "man haunted by his past. The supporting cast is equally impressive, with \nJoseph Gordon-Levitt and Ellen Page standing out in their respective roles. ", "extractionText": "The dialogue is \nsometimes dense and complex", "afterText": ", but it suits the intricate plot and adds to the film\u2019s \nintellectual appeal. \nThe score by Hans Zimmer is unforgettable, elevating every scene to em", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The dialogue</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">dense and complex</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "it suits the intricate plot and adds to the film\u2019s intellectual appeal", "color": "#C8E6C9", "startPos": 706, "endPos": 777, "beforeText": "ually impressive, with \nJoseph Gordon-Levitt and Ellen Page standing out in their respective roles. The dialogue is \nsometimes dense and complex, but ", "extractionText": "it suits the intricate plot and adds to the film\u2019s \nintellectual appeal", "afterText": ". \nThe score by Hans Zimmer is unforgettable, elevating every scene to emotional heights that \nare both thrilling and haunting. The imagery is stunnin", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The dialogue</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">adds to the film\u2019s intellectual appeal</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "The score by Hans Zimmer is unforgettable", "color": "#C8E6C9", "startPos": 780, "endPos": 821, "beforeText": "n their respective roles. The dialogue is \nsometimes dense and complex, but it suits the intricate plot and adds to the film\u2019s \nintellectual appeal. \n", "extractionText": "The score by Hans Zimmer is unforgettable", "afterText": ", elevating every scene to emotional heights that \nare both thrilling and haunting. The imagery is stunning; Wally Pfister\u2019s award-winning \ncinematogr", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The score by Hans Zimmer</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">unforgettable</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "elevating every scene to emotional heights that are both thrilling and haunting", "color": "#C8E6C9", "startPos": 823, "endPos": 903, "beforeText": "sometimes dense and complex, but it suits the intricate plot and adds to the film\u2019s \nintellectual appeal. \nThe score by Hans Zimmer is unforgettable, ", "extractionText": "elevating every scene to emotional heights that \nare both thrilling and haunting", "afterText": ". The imagery is stunning; Wally Pfister\u2019s award-winning \ncinematography creates breathtaking visuals that linger in your mind long after the credits ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The score</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">elevating every scene to emotional heights</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "The imagery is stunning", "color": "#C8E6C9", "startPos": 905, "endPos": 928, "beforeText": "s \nintellectual appeal. \nThe score by Hans Zimmer is unforgettable, elevating every scene to emotional heights that \nare both thrilling and haunting. ", "extractionText": "The imagery is stunning", "afterText": "; Wally Pfister\u2019s award-winning \ncinematography creates breathtaking visuals that linger in your mind long after the credits \nroll. \nThat said, the fi", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The imagery</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">stunning</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "Wally Pfister\u2019s award-winning cinematography creates breathtaking visuals", "color": "#C8E6C9", "startPos": 930, "endPos": 983, "beforeText": "The score by Hans Zimmer is unforgettable, elevating every scene to emotional heights that \nare both thrilling and haunting. The imagery is stunning; ", "extractionText": "Wally Pfister\u2019s award-winning \ncinematography creates", "afterText": " breathtaking visuals that linger in your mind long after the credits \nroll. \nThat said, the film\u2019s ambitious narrative structure and slow pacing migh", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Wally Pfister\u2019s award-winning cinematography</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">creates breathtaking visuals</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "breathtaking visuals that linger in your mind long after the credits roll", "color": "#C8E6C9", "startPos": 984, "endPos": 1058, "beforeText": "very scene to emotional heights that \nare both thrilling and haunting. The imagery is stunning; Wally Pfister\u2019s award-winning \ncinematography creates ", "extractionText": "breathtaking visuals that linger in your mind long after the credits \nroll", "afterText": ". \nThat said, the film\u2019s ambitious narrative structure and slow pacing might not be for \neveryone. At times, the exposition feels overwhelming, and th", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The visuals</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">linger in your mind</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "the film\u2019s ambitious narrative structure and slow pacing might not be for everyone", "color": "#C8E6C9", "startPos": 1072, "endPos": 1155, "beforeText": "unning; Wally Pfister\u2019s award-winning \ncinematography creates breathtaking visuals that linger in your mind long after the credits \nroll. \nThat said, ", "extractionText": "the film\u2019s ambitious narrative structure and slow pacing might not be for \neveryone", "afterText": ". At times, the exposition feels overwhelming, and the emotional core sometimes \ntakes a backseat to the plot mechanics. The ending remains ambiguous,", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film\u2019s ambitious narrative structure and slow pacing</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">might not be for everyone</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "the exposition feels overwhelming", "color": "#C8E6C9", "startPos": 1167, "endPos": 1200, "beforeText": "in your mind long after the credits \nroll. \nThat said, the film\u2019s ambitious narrative structure and slow pacing might not be for \neveryone. At times, ", "extractionText": "the exposition feels overwhelming", "afterText": ", and the emotional core sometimes \ntakes a backseat to the plot mechanics. The ending remains ambiguous, sparking debates \namong viewers, which might", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The exposition</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">overwhelming</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "the emotional core sometimes takes a backseat to the plot mechanics", "color": "#C8E6C9", "startPos": 1206, "endPos": 1274, "beforeText": "ll. \nThat said, the film\u2019s ambitious narrative structure and slow pacing might not be for \neveryone. At times, the exposition feels overwhelming, and ", "extractionText": "the emotional core sometimes \ntakes a backseat to the plot mechanics", "afterText": ". The ending remains ambiguous, sparking debates \namong viewers, which might be frustrating for those who prefer clear-cut conclusions. \nOverall, Ince", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The emotional core</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">takes a backseat to the plot mechanics</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "The ending remains ambiguous", "color": "#C8E6C9", "startPos": 1276, "endPos": 1304, "beforeText": "ng might not be for \neveryone. At times, the exposition feels overwhelming, and the emotional core sometimes \ntakes a backseat to the plot mechanics. ", "extractionText": "The ending remains ambiguous", "afterText": ", sparking debates \namong viewers, which might be frustrating for those who prefer clear-cut conclusions. \nOverall, Inception is a film that challenge", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The ending</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Neutral</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">ambiguous</span>}</div>"}, {"index": 19, "class": "audience_impact", "text": "sparking debates among viewers", "color": "#D2E3FC", "startPos": 1306, "endPos": 1337, "beforeText": " At times, the exposition feels overwhelming, and the emotional core sometimes \ntakes a backseat to the plot mechanics. The ending remains ambiguous, ", "extractionText": "sparking debates \namong viewers", "afterText": ", which might be frustrating for those who prefer clear-cut conclusions. \nOverall, Inception is a film that challenges its audience while delivering a", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">engaged, contemplative</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The ambiguous ending</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">viewers</span>}</div>"}, {"index": 20, "class": "audience_impact", "text": "might be frustrating for those who prefer clear-cut conclusions", "color": "#D2E3FC", "startPos": 1345, "endPos": 1408, "beforeText": "lming, and the emotional core sometimes \ntakes a backseat to the plot mechanics. The ending remains ambiguous, sparking debates \namong viewers, which ", "extractionText": "might be frustrating for those who prefer clear-cut conclusions", "afterText": ". \nOverall, Inception is a film that challenges its audience while delivering an exhilarating \ncinematic experience. It&#x27;s a thoughtful blend of blockb", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">frustration</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The ambiguous ending</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">those who prefer clear-cut conclusions</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "a film that challenges its audience", "color": "#C8E6C9", "startPos": 1433, "endPos": 1468, "beforeText": "ing remains ambiguous, sparking debates \namong viewers, which might be frustrating for those who prefer clear-cut conclusions. \nOverall, Inception is ", "extractionText": "a film that challenges its audience", "afterText": " while delivering an exhilarating \ncinematic experience. It&#x27;s a thoughtful blend of blockbuster action and art-house creativity \nthat stands the test ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Inception</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">challenges its audience</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "delivering an exhilarating cinematic experience", "color": "#C8E6C9", "startPos": 1475, "endPos": 1523, "beforeText": "mong viewers, which might be frustrating for those who prefer clear-cut conclusions. \nOverall, Inception is a film that challenges its audience while ", "extractionText": "delivering an exhilarating \ncinematic experience", "afterText": ". It&#x27;s a thoughtful blend of blockbuster action and art-house creativity \nthat stands the test of time. \nThis review captures a variety of sentiment p", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Inception</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">exhilarating cinematic experience</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "a thoughtful blend of blockbuster action and art-house creativity", "color": "#C8E6C9", "startPos": 1530, "endPos": 1595, "beforeText": "prefer clear-cut conclusions. \nOverall, Inception is a film that challenges its audience while delivering an exhilarating \ncinematic experience. It&#x27;s ", "extractionText": "a thoughtful blend of blockbuster action and art-house creativity", "afterText": " \nthat stands the test of time. \nThis review captures a variety of sentiment polarities: praise for acting, direction, score, and \nvisuals; criticism ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Inception</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">thoughtful blend</span>}</div>"}, {"index": 24, "class": "opinion_statement", "text": "stands the test of time", "color": "#C8E6C9", "startPos": 1602, "endPos": 1625, "beforeText": "ges its audience while delivering an exhilarating \ncinematic experience. It&#x27;s a thoughtful blend of blockbuster action and art-house creativity \nthat ", "extractionText": "stands the test of time", "afterText": ". \nThis review captures a variety of sentiment polarities: praise for acting, direction, score, and \nvisuals; criticism regarding pacing, exposition, ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Inception</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">stands the test of time</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
